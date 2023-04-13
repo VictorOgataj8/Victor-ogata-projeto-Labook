@@ -23,29 +23,43 @@ export interface PostModel {
 }
 
 export interface postDB {
-    id: string,
-    creator_id: string,
-    content: string,
-    likes: number ,
-    dislikes: number ,
-    created_at: string,
-    updated_at: string 
-};
-
-export interface UserDB {
-    id:string,
-    name:string,
-    email:string,
-    password:string,
-    role: USER_ROLES,
-    created_at:string 
+  id: string;
+  creator_id: string;
+  content: string;
+  likes: number;
+  dislikes: number;
+  created_at: string;
+  updated_at: string;
 }
 
-export interface UserModel{
-    id:string,
-    name:string,
-    email:string,
-    password:string,
-    role:USER_ROLES,
-    createdAt:string
+export interface UserDB {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  role: USER_ROLES;
+  created_at: string;
+}
+
+export interface UserModel {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  role: USER_ROLES;
+  createdAt: string;
+}
+export interface PostWithCreatorDB extends postDB {
+  creator_name: string;
+}
+
+export interface LikeDislikeDB {
+  user_id: string;
+  post_id: string;
+  like: number;
+}
+
+export enum POST_LIKE {
+  ALREADY_LIKED = "ALREADY LIKED",
+  ALREADY_DISLIKED = "ALREADY DISLIKED",
 }

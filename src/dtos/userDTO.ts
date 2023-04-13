@@ -1,48 +1,48 @@
-import { PostModel } from '../types'
+import { PostModel } from "../types";
 
 export interface SignupInputDTO {
-    name: unknown,
-    email: unknown,
-    password: unknown
+  name: unknown;
+  email: unknown;
+  password: unknown;
 }
 
 export interface SignupOutputDTO {
-    token: string
+  token: string;
 }
 
 export interface LoginInputDTO {
-    email: unknown,
-    password: unknown
+  email: unknown;
+  password: unknown;
 }
 
 export interface LoginOutputDTO {
-    token: string
+  token: string;
 }
 
 export interface GetPostInputDTO {
-    token: string | undefined
+  token: string | undefined;
 }
 
-export type GetPostsOutputDTO = PostModel[]
+export type GetPostsOutputDTO = PostModel[];
 
 export interface CreatePostsInputDTO {
-    token: string | undefined,
-    content: unknown
+  token: string | undefined;
+  content: unknown;
 }
 
 export interface EditPostInputDTO {
-    idToEdit: string,
-    token: string | undefined,
-    content: unknown
+  idToEdit: string;
+  token: string | undefined;
+  content: unknown;
 }
 
 export interface DeletePostInputDTO {
-    idToDelete: string,
-    token: string | undefined
+  idToDelete: string;
+  token: string | undefined;
 }
 
 export interface LikeOrDislikePostInputDTO {
-    idToLikeOrDislike: string,
-    token: string | undefined,
-    like: unknown
+  idToLikeOrDislike: string;
+  token: string | undefined;
+  like: unknown;
 }
